@@ -1,0 +1,44 @@
+@import "../constants.scss";
+
+.popup {
+  min-width: 200px;
+  /* min-height: 120px; */
+  width: auto;
+  flex-wrap: nowrap;
+  position: absolute;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  top: 0;
+  right: 0;
+  transform: translate(60%, 14%);
+  background-color: var(--color-background-2);
+  z-index: 1;
+  color: black;
+  font-size: 0.8rem;
+  /* padding: 4px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottom {
+  top: unset !important;
+  right: unset !important;
+  transform: translate(10%, -0%);
+}
+@keyframes hideDiv {
+  0% {
+    display: flex;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes showDiv {
+  0% {
+    display: none;
+  }
+  100% {
+    display: flex;
+  }
+}

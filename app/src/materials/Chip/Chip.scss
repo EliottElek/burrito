@@ -1,0 +1,23 @@
+.chip__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  gap: 16px;
+  border-radius: 30px;
+  background-color: var(--color-background-1);
+  color: var(--font-color);
+  padding: 1px;
+  margin: 4px;
+  padding-left: 8px;
+}
+.chip__container__image {
+  height: 37px;
+  width: 37px;
+  border: solid 1px rgb(221, 221, 221);
+  border-radius: 50%;
+}

@@ -1,0 +1,97 @@
+.login__container,
+.signup__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+  width: auto;
+  padding: 30px;
+}
+
+.logo__container {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+.login__card {
+  width: 100%;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  background-color: var(--card-background);
+  color: var(--font-color);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top__login__card__logocontainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+.forgot__password__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  margin-top: 6px;
+  text-decoration: underline;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  color: var(--font-color);
+}
+.new__account__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  color: var(--font-color);
+}
+.login__btn {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  font-size: 1rem;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.top__login__already__account {
+  font-size: 0.8rem;
+}
+.firstname__lastname__container {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 650px) {
+  .firstname__lastname__container {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .signup__container {
+    padding: 0px;
+  }
+  .login__card {
+    padding: 0px;
+    min-height: -webkit-fill-available;
+    max-width: none;
+    box-shadow: none;
+    background-color: var(--card-background);
+    color: var(--font-color);
+    border-radius: 0px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

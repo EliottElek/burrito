@@ -1,0 +1,26 @@
+.dnd__wide__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: var(--background1);
+  overflow: hidden;
+}
+.settings__button {
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--font-color);
+  border-radius: 25px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  #custom__bg {
+    height: calc(100vh - 60px)!important;
+  }
+}

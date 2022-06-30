@@ -1,0 +1,132 @@
+.stickynavbar__container {
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  height: 55px;
+  // background-color: var(--color-background-2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.stickynavbar__container {
+  background: var(--nav-color);
+}
+
+// @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+//   .stickynavbar__container {
+//     -webkit-backdrop-filter: blur(10px);
+//     backdrop-filter: blur(10px);
+//   }
+// }
+.settings__button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: var(--font-color);
+  border-radius: 25px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.period__span {
+  color: var(--main-color);
+  cursor: default;
+}
+.logo__kifekoi {
+  height: 36px;
+  margin-left: 12px;
+  width: auto;
+  cursor: pointer;
+}
+
+.events__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+  width: auto;
+  color: var(--font-color);
+  &__divider {
+    height: 20px;
+    width: 1px;
+    background-color: rgba(156, 156, 156, 0.15);
+  }
+}
+.events__container > p {
+  opacity: 0.7;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.list__style__btn,
+.list__style__btn__active {
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: var(--font-color);
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+.top__nav__btn {
+  background-color: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: var(--font-color);
+  border-radius: 4px;
+  border: solid 0.1rem var(--shadow-color);
+  padding: 4px 8px;
+  gap: 4px;
+  transition: 0.2s ease;
+}
+.top__nav__btn:hover {
+  transition: 0.2s ease;
+  border-color: var(--main-color);
+}
+.list__style__btn:hover,
+.list__style__btn__active:hover {
+  background-color: var(--color-background-1);
+}
+.list__style__btn__active {
+  border: solid 0.1rem var(--main-color);
+}
+.top__nav__list__action__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.selected__number__span {
+  font-size: 0.8rem;
+  color: var(--font-color);
+}
+@media screen and (max-width: 950px) {
+  .name__container__title,
+  .period__span {
+    font-size: 1rem;
+    display: none;
+  }
+  .nav__actions {
+    display: none;
+  }
+  .list__style__btn,
+  .list__style__btn__active {
+    display: none;
+  }
+}

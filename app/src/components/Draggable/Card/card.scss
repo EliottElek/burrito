@@ -1,0 +1,391 @@
+.card {
+  padding: 4px;
+  background-color: transparent;
+  color: var(--font-color);
+  transition: 0.1s all;
+  background-color: transparent;
+}
+.card__content {
+  transition: 0.1s all;
+  padding: 10px;
+  padding-left: 16px;
+  padding-top: 34px;
+  padding-bottom: 30px;
+  min-height: 70px;
+  height: auto;
+  border-radius: 3px;
+  background-color: var(--card-background);
+  color: var(--font-color);
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  & img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+.add__card > * {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+.card__content ul > li {
+  list-style: disc;
+  margin-left: 12px;
+}
+.card__content:hover > .card__content__added__indicator,
+.card__content:hover > .card__content__events__container {
+  opacity: 1;
+  transition: 0.1s ease;
+}
+.dragging {
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.2);
+}
+.status__span {
+  max-width: 140px;
+  font-size: 1rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color);
+}
+.status__container {
+  margin-top: 30px;
+}
+.modal__content__container_scrollable_item_container > span {
+  margin-right: 3px;
+  transition: 0.1s all;
+}
+.modal__content__span__value {
+  transition: 0.1s all;
+  padding: 6px;
+  width: auto;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px;
+}
+.card__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  top: 4px;
+  left: 8px;
+  transform: scale(0.8);
+  transition: 0.1s all;
+}
+.current__period {
+  color: var(--main-color);
+  background-color: rgba(0, 204, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 14px;
+}
+.previous__period {
+  color: var(--font-color);
+  background-color: #dfbb194f;
+  padding: 2px 6px;
+  border-radius: 14px;
+}
+.violet {
+  color: var(--main-color);
+  padding: 4px;
+  border-radius: 3px;
+}
+.red {
+  color: #bb1313;
+}
+.orange {
+  gap: 4px;
+  color: #e78331;
+}
+.marron {
+  gap: 4px;
+  color: #64462e;
+}
+.kanban__section__content__name__container__avatars__container {
+  display: flex;
+  gap: -4px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.default_avatar {
+  margin-right: -5px;
+}
+.kanban__section__content__name__container__edit__button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+  font-size: 1.2rem;
+  color: var(--font-color);
+  padding: 4px;
+  border-radius: 3px;
+  transition: 0.1s ease;
+  display: flex;
+}
+.kanban__section__content__name__container__comments__indicator {
+  background-color: transparent;
+  height: 100%;
+  width: auto;
+  font-size: 1.2rem;
+  color: var(--font-color);
+  padding: 4px;
+  border-radius: 3px;
+  transition: 0.1s ease;
+  display: flex;
+  transform: translateX(25px);
+  align-items: center;
+  &__number {
+    font-size: 0.8rem;
+    margin-right: 3px;
+  }
+}
+.kanban__section__content__name__container__button__container {
+  display: flex;
+}
+.card__content__events__container {
+  position: absolute;
+  margin: 2px;
+  top: unset !important;
+  bottom: 0;
+  left: 6px;
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: 0.1s all;
+}
+@media (hover: hover) {
+  .card__content__events__container,
+  .card__content__added__indicator {
+    opacity: 0;
+  }
+}
+@media (hover: none) {
+  .card__content__events__container,
+  .card__content__added__indicator {
+    opacity: 1;
+  }
+}
+.kanban__section__content__name__container__edit__button:hover {
+  background-color: var(--color-background-1);
+  color: var(--font-color);
+  transition: 0.1s ease;
+}
+.card__content__added__indicator {
+  transition: 0.2s ease;
+  padding: 3px;
+  background-color: transparent;
+  width: auto;
+  color: var(--font-color);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.modif__description__form {
+  margin-top: 10px;
+}
+.modif__description__textarea {
+  width: 97% !important;
+  font-size: 1rem;
+  margin: auto;
+  height: auto;
+  background-color: var(--card-background);
+  border: none;
+  min-height: 30px;
+  border-radius: 1px;
+  padding: 5px;
+  transition: 0.2s ease;
+  color: var(--font-color);
+}
+.open__card__textarea {
+  position: relative;
+  margin-top: 60px !important;
+  border-radius: 4px;
+}
+.validate:hover {
+  color: rgb(3, 158, 3);
+  background-color: rgba(0, 128, 0, 0.472);
+  transition: 0.1s ease;
+}
+.delete__button {
+  font-size: 16px;
+}
+.delete__button:hover {
+  color: rgb(158, 21, 3);
+  background-color: var(--font-color);
+  transition: 0.1s ease;
+}
+.more__button {
+  left: 30px;
+}
+.underlined {
+  margin: 0;
+  text-decoration: underline;
+}
+.divider {
+  height: 1px;
+  width: 90%;
+  margin: auto;
+  background-color: rgba(128, 128, 128, 0.267);
+}
+.card__description {
+  overflow-wrap: break-word;
+}
+.modal__card__content {
+  font-size: larger;
+  margin: 10px;
+  margin-top: 60px;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  outline: solid 1px transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+.modal__card__content > ul {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.modal__card__content:hover {
+  transition: all 0.2s ease;
+  outline-color: rgba(128, 128, 128, 0.233);
+}
+
+.action__container__modif__mode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px;
+}
+.delete__actions__container {
+  align-self: flex-end;
+  display: flex;
+  gap: 6px;
+}
+.space__between {
+  justify-content: space-between;
+}
+.period__title__modal {
+  font-size: 1.2rem;
+  padding: 1px 6px;
+}
+.period__title__modal__container {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.period__title__modal__warning__message {
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.date__creator__span {
+  font-size: 0.9rem;
+  color: var(--font-color);
+  opacity: 0.6s;
+  font-weight: 200;
+}
+.card__status__verified,
+.card__status__to__verify {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  top: 6px;
+  left: 80px;
+  transition: 0.1s all;
+  padding: 2px 6px;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  border: solid 1px rgba(128, 128, 128, 0.336);
+}
+.modal__card__status__verified,
+.modal__card__status__to__verify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  top: 4px;
+  transition: 0.1s all;
+  padding: 3px 8px;
+  border-radius: 14px;
+  font-size: 1rem;
+  border: solid 1px rgba(128, 128, 128, 0.336);
+}
+.status__indicator__verified,
+.status__indicator__to-verify {
+  width: 7px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+  background-color: #0079bf69;
+}
+.status__indicator__to-verify {
+  background-color: rgba(230, 181, 125, 0.657);
+}
+.card__done__span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(4, 238, 4, 0.295);
+  color: var(--check-color);
+  border-top-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.id__span {
+  font-style: italic;
+  opacity: 0.5;
+  position: absolute;
+  top: 10px;
+  font-size: 0.8rem;
+  left: 10px;
+  color: var(--font-color);
+}
+.done__animation::before {
+  position: absolute;
+  content: "";
+  border-radius: inherit;
+  border: solid 2px transparent;
+  animation-name: success;
+  animation-duration: 0.4s;
+}
+@keyframes success {
+  from {
+    border-color: green;
+    border-width: 2px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  to {
+    border-color: rgba(0, 128, 0, 0);
+    border-width: 8px;
+    top: -4px;
+    left: -4px;
+    bottom: -4px;
+    right: -4px;
+  }
+}

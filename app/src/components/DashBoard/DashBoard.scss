@@ -1,0 +1,29 @@
+.sticky__side__nav {
+  width: auto;
+  background-color: var(--background-color-2);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+.sticky__side__nav > .default__menu {
+  margin-top: 40px;
+}
+.dashboard__menu__item {
+  min-height: 40px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: flex-start;
+  color: white;
+  gap: 8px;
+  border-right: solid 4px transparent;
+}
+.dashboard__menu__item:hover {
+  background-color: rgba(128, 128, 128, 0.171);
+}
+.active__menu__item {
+  background-color: rgba(128, 128, 128, 0.171);
+  border-color: var(--main-color);
+}
