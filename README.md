@@ -1,8 +1,8 @@
 # burrito
 
-clone this projet : 
+clone this project : 
 
-`git clone https://github.com/EliottElek/kifeckoi.git`
+`git clone https://github.com/EliottElek/burrito.git`
 
 
 navigate to api first, install packages and start the backend : 
